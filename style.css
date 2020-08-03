@@ -1,0 +1,534 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+    display: block;
+    text-decoration: none;
+}
+img{
+    display: block;
+}
+
+
+.wrap{
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 38px;
+    margin-top: 30px;
+}
+
+.menu-dehaze{
+    display: none;
+}
+
+h1>a{
+    background-image: url(https://hexschool.github.io/webLayoutTraining1st/student-week1/logo-all-dark.svg);
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-size: cover;
+    width: 220px;
+    height: 40px;
+}
+
+.menu{
+    width: 319px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu>li>a{
+    font-size: 16px;
+    line-height: 73px;
+    font-family: PingFang TC;
+    color: #3F5D45;
+}
+
+.menu>li>a:hover{
+    color: #000;
+}
+
+
+.banner>img{
+    margin-bottom: 60px;
+    max-width: 100%;
+}
+
+/*768px header+banner斷點*/
+@media(max-width: 768px){
+    .header{
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-bottom: 30px;
+    }
+
+    .menu-dehaze{
+        display: block;
+    }
+
+    h1>a{
+        background-image: url(https://hexschool.github.io/webLayoutTraining1st/student-week1/logotype-lg-dark.svg);
+        width: 130px;
+        height: 20px;
+    }    
+
+    .menu{
+        width: 24px;
+    }
+
+    .menu>li:nth-child(1), .menu>li:nth-child(2), .menu>li:nth-child(3){
+        display: none;
+    }
+
+    .banner>img{
+        margin-bottom: 0;
+    }
+}
+
+
+
+.body{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.dessert-type{
+    width: 32%;
+    font-family: PingFang TC;
+    font-weight: semibold;
+    text-align: center;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: -0.5px;
+}
+
+
+.dessert-type>h2{
+    background: #3F5D45;
+    color: #EAF0ED;
+    padding: 16px 64px;
+
+}
+
+.current-btn{
+    background: #EAF0ED;
+    color: #3F5D45;
+    border: 1px solid #EAF0ED;
+    padding: 16px 64px;
+}
+
+.type>li>a{
+    color: #3F5D45;
+    border: 1px solid #EAF0ED;
+    padding: 16px 64px;
+}
+
+.type>li>a:hover{
+    background-color:#EAF0ED;
+    border: 1px solid #3F5D45;
+}
+
+.product{
+    max-width: 620px;
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pic{
+    max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+/*768px 主要區塊-商品斷點*/
+@media(max-width: 768px){
+    .body{
+        flex-wrap: wrap;
+    }
+
+    .dessert-type{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .product{
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .pic{
+        margin-bottom: 30px;
+    }
+}
+
+/*商品圖片+按鈕細節*/
+.label{
+    width: 300px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+.label>li:nth-child(2){
+    background: #3F5D45;
+    color: #EAF0ED;
+    position: absolute;
+    left: 20px;
+    padding: 10px;
+    font-family: PingFang TC;
+    font-weight: semibold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 5px;
+    text-align: center;
+    writing-mode: vertical-rl;   
+}
+
+.label>li:nth-child(3){
+    position: absolute;
+    top: 19px;
+    right: 22px;
+}
+
+.product>.pic>.item{
+    width: 300px;
+    margin: 0 auto;
+    border: #EAF0ED 1pt solid;
+    display: flex;
+    align-items: center;
+}
+
+.pic-name{
+    font-family: PingFang TC;
+    font-weight: light;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 14px 33px;
+    color: #3F5D45;
+}
+
+
+.coin{
+    font-family: PingFang TC;
+    font-weight: semibold;
+    font-size: 20px;
+    line-height: 24px;
+    border-left: #EAF0ED 1pt solid;
+    padding: 14px 20px 14px 25px;
+    color: #3F5D45;
+}
+
+.shop{
+    width: 300px;
+}
+
+.shop>li>a{
+    background: #EAF0ED;
+    border: 1px solid #EAF0ED;
+    color: #3F5D45;
+    font-family: PingFang TC;
+    font-weight: semibold;
+    font-size: 24px;
+    line-height: 20px;
+    padding: 16px 90px;
+    letter-spacing: -0.5px;
+    display: block;
+    text-decoration: none;
+}
+
+.shop>li>a:hover{
+    background:  #3F5D45;
+    border: 1px solid #3F5D45;
+    color: #EAF0ED;
+}
+
+.page{
+    max-width: 940px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 60px;
+}
+
+/*768px 頁碼斷點*/
+@media(max-width: 768px){
+    .page{
+        justify-content: center;
+    }
+}
+
+
+.page>li>a>img{
+    padding: 17px;
+    border: #EAF0ED 1px solid;
+}
+
+.page>li>a>img:hover{
+    background: #EAF0ED;
+}
+
+
+.page-num{
+    display: flex;
+    
+}
+
+.page-num>a{
+    width: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: PingFang TC;
+    font-weight: semibold;
+    font-size: 20px;
+    line-height: 20px;
+    border: #EAF0ED 1px solid ;
+    color: #3F5D45;
+    text-align: center;
+}
+
+.page-num>a:hover{
+    color: #3F5D45;
+    background: #EAF0ED;
+}
+
+.page-num:nth-child(2)>a{
+    background: #3F5D45;
+    border: #3F5D45 1px solid ;
+    color: #EAF0ED;
+    text-align: center;
+}
+
+/*下方區塊*/
+.container{
+    max-width: 780px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.subscribe{
+    background-color: #3F5D45;
+}
+
+.subscribe-inner{
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: PingFang TC;
+    font-size: 24px;
+    line-height: 29px;
+    color: #EAF0ED;
+}
+
+
+.subscribe-title{
+    display: flex;
+    align-items: center;
+}
+
+.subscribe-title>img{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+
+.form-mail{
+    background-color: #EAF0ED;
+    width: 380px;
+    padding: 16px 0px 16px 20px;
+    display: flex;
+    width: 380px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-mail>label{
+    padding: 16px 0px 16px 20px;
+    display: flex;
+}
+
+.form-mail>label>img{
+    padding-right: 20px;
+}
+
+#mail{
+    background-color: #EAF0ED;
+    cursor:pointer;
+    border: none;
+    outline: none;
+}
+
+.form-mail>input[type="submit"]{
+    background-image: url(https://hexschool.github.io/webLayoutTraining1st/student-week1/arrow_forward-24px.png);
+    width: 64px;
+    background-color: #FFE180;
+    border: none;
+    padding: 20px 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/*768px 訂閱郵件斷點*/
+@media(max-width: 768px){
+    .container{
+        width: 75%;
+    }
+    .subscribe-inner{
+        justify-content: center;
+    }
+    .subscribe-title{
+        margin-bottom: 30px;
+    }
+    .form-mail{
+        width: 100%;
+    }
+}
+
+
+.footer{
+    background-color:#EAF0ED;
+    padding-bottom: 30px;
+}
+
+.footer-inner{
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.information{
+    width: 50%;
+    padding-top: 38.9pt;
+}
+
+.logo{
+    width: 171px;
+    margin-bottom: 115.5px;
+}
+
+.contact{
+    font-size: 16px;
+    line-height: 24px;
+    color: #3F5D45;
+    font-family: PingFang TC;
+    font-weight: regular;
+    margin-bottom: 30px;
+}
+
+.slogan{
+    width: 50%;
+    padding-top: 30px;
+    writing-mode: vertical-rl;
+    font-size: 23px;
+    line-height: 29pt;   
+    color: #3F5D45;
+    font-family: Noto Serif TC Black;
+    letter-spacing: 6px;
+}
+
+.link{
+    display: flex;
+    width: 50%;
+}
+.link>li>a>img{
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+}
+
+.footer-inner>p{
+    font-size: 16px;
+    line-height: 19px;
+    color: #3F5D45;
+    padding-top: 16px;
+    font-family: Times;
+}
+
+/*768px footer斷點*/
+@media(max-width: 768px){
+    .footer-inner{
+        flex-direction: column
+    }
+
+    .logo{
+        margin-bottom: 39.5px;
+    }
+
+    .contact{
+        margin-bottom: 30px;
+    }
+
+    .slogan{
+        display: none;
+    }
+    
+    .link{
+        margin-bottom: 23px;
+    }
+}
